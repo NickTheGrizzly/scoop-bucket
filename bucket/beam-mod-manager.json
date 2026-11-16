@@ -1,0 +1,35 @@
+{
+    "version": "0.9.6",
+    "description": "Free mod manager for BeamNG.drive and BeamMP with instant hardlink switching.",
+    "homepage": "https://beammodmanager.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://beammodmanager.com/terms"
+    },
+    "notes": "Your library, settings and Mod Storage live outside the Scoop app folder (in your AppData and Mod Storage folders), so they survive updates and uninstalls.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/NickTheGrizzly/beam-mod-manager-releases/releases/download/v0.9.6/Beam-Mod-Manager-0.9.6-Portable.exe#/BeamModManager.exe",
+            "hash": "56eb96fe04f4a120905809974a8f076d9b10e1e97303d46b3ca68a6e75cf3a42"
+        }
+    },
+    "shortcuts": [
+        [
+            "BeamModManager.exe",
+            "Beam Mod Manager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/NickTheGrizzly/beam-mod-manager-releases"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/NickTheGrizzly/beam-mod-manager-releases/releases/download/v$version/Beam-Mod-Manager-$version-Portable.exe#/BeamModManager.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
